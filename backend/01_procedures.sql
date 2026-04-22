@@ -49,7 +49,7 @@ BEGIN
     RETURNING id INTO p_cita_id;
 
 EXCEPTION
-    WHEN P0001 THEN
+    WHEN raise_exception THEN
         -- Relanzar nuestras propias excepciones generadas
         RAISE;
     WHEN OTHERS THEN
