@@ -66,7 +66,7 @@ export default function VacunacionPendiente() {
 
   return (
     <div className="max-w-5xl mx-auto p-6">
-      <header className="flex justify-between items-center bg-white p-4 rounded shadow mb-6">
+      <header className="flex justify-between items-center bg-white text-gray-900 p-4 rounded shadow mb-6">
         <div>
           <h2 className="text-xl font-bold flex items-center gap-3">
             Vacunación Pendiente
@@ -94,7 +94,7 @@ export default function VacunacionPendiente() {
         </div>
       </header>
 
-      <main className="bg-white p-6 rounded shadow">
+      <main className="bg-white text-gray-900 p-6 rounded shadow">
         {error && (
           <div className="bg-red-100 text-red-700 p-3 rounded mb-4">
             {error}

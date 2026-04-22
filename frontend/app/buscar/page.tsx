@@ -62,7 +62,7 @@ export default function BuscarMascotas() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <header className="flex justify-between items-center bg-white p-4 rounded shadow mb-6">
+      <header className="flex justify-between items-center bg-white text-gray-900 p-4 rounded shadow mb-6">
         <div>
           <h2 className="text-xl font-bold">Búsqueda de Mascotas</h2>
           <p className="text-sm text-gray-500">
@@ -79,7 +79,7 @@ export default function BuscarMascotas() {
         </div>
       </header>
 
-      <main className="bg-white p-6 rounded shadow">
+      <main className="bg-white text-gray-900 p-6 rounded shadow">
         <form onSubmit={handleSearch} className="flex gap-4 mb-6">
           <input
             type="text"

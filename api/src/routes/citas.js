@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
     client = await pool.connect();
 
     if (role === 'veterinario') {
-      await client.query('SET LOCAL app.current_vet_id = $1', [vetId]);
+      await client.query(`SET LOCAL app.current_vet_id = ${parseInt(vetId, 10)}`);
     }
 
     const queryText = 'CALL sp_agendar_cita($1, $2, $3::TIMESTAMP, $4, NULL)';
@@ -45,7 +45,7 @@ router.get('/', async (req, res) => {
     client = await pool.connect();
 
     if (role === 'veterinario') {
-      await client.query('SET LOCAL app.current_vet_id = $1', [vetId]);
+      await client.query(`SET LOCAL app.current_vet_id = ${parseInt(vetId, 10)}`);
     }
 
     const result = await client.query('SELECT * FROM citas ORDER BY fecha_hora DESC');
